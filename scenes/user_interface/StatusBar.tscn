@@ -556,7 +556,7 @@ Animator = NodePath("AnimationPlayer")
 health_bar = NodePath("Body/ProgressBarBG/ProgressBar")
 name_label = NodePath("Body/Name")
 level_label = NodePath("Body/Level")
-health_label = NodePath("Body/Level")
+health_label = NodePath("Body/ProgressBarBG/Health")
 
 [node name="Body" type="NinePatchRect" parent="." unique_id=1141099761]
 layout_mode = 1

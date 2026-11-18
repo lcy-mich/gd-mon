@@ -23,7 +23,9 @@ func _process(_delta: float) -> void:
 	# for now only single battles are implemented, so pokemons can be assumed to only contain the middle position.
 	var pokemon : Pokemon = pokemons[Battle.BATTLE_POSITIONS.Middle]
 	
-	if !pokemon.is_fully_loaded(): return
+	if !pokemon.is_fully_loaded(): 
+		print("not loaded!")
+		return
 	
 	var pokemon_health : Health = pokemon.health_component
 	

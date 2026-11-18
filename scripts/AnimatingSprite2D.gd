@@ -20,9 +20,9 @@ func _ready() -> void:
 	
 	on_visibility_changed(frame)
 
-func on_visibility_changed(set_frame : int = 0) -> void:
+func on_visibility_changed(set_frame_val : int = 0) -> void:
 	if is_visible_in_tree():
-		frame = set_frame
+		frame = set_frame_val
 		FrameTimer.start()
 		return
 	FrameTimer.stop()
