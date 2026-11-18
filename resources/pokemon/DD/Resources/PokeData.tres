@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PokeData" format=3 uid="uid://bupx6rcr72woc"]
+
+[ext_resource type="Script" uid="uid://dbgcbxagvtkth" path="res://scripts/Resources/PokeData.gd" id="1_tosuc"]
+
+[resource]
+script = ExtResource("1_tosuc")
+species = "DD"
+height = 0.12
+weight = 0.67
+metadata/_custom_type_script = "uid://dbgcbxagvtkth"

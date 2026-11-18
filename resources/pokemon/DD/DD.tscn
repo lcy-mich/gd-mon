@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://rr288le104af"]
+
+[ext_resource type="Script" uid="uid://c36fp2das8peg" path="res://scripts/Pokemon.gd" id="1_1qjvc"]
+[ext_resource type="Resource" uid="uid://s06parg2cc24" path="res://resources/pokemon/DD/Resources/PokemonResource.tres" id="2_b75yp"]
+[ext_resource type="Texture2D" uid="uid://8t2o7ogk1jhh" path="res://graphics/textures/dd-sheet.png" id="3_b75yp"]
+[ext_resource type="Texture2D" uid="uid://clavmd7a6xn7f" path="res://graphics/textures/ddbehind-sheet.png" id="5_5mvvj"]
+[ext_resource type="Script" uid="uid://b2d8yb4kf8288" path="res://scripts/AnimatingSprite2D.gd" id="5_amm84"]
+
+[node name="DD" type="Node2D" unique_id=1860241535 node_paths=PackedStringArray("texture", "front", "back")]
+script = ExtResource("1_1qjvc")
+pokemon_resource = ExtResource("2_b75yp")
+texture = NodePath("Texture")
+front = NodePath("Front")
+back = NodePath("Back")
+metadata/_custom_type_script = "uid://c36fp2das8peg"
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=888010005]
+visible = false
+texture = ExtResource("3_b75yp")
+hframes = 11
+script = ExtResource("5_amm84")
+framerate = 10.0
+totalframes = 11
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="Front" type="Sprite2D" parent="." unique_id=1881056303]
+visible = false
+texture = ExtResource("3_b75yp")
+hframes = 11
+script = ExtResource("5_amm84")
+framerate = 10.0
+totalframes = 11
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="Back" type="Sprite2D" parent="." unique_id=1972314395]
+visible = false
+texture = ExtResource("5_5mvvj")
+hframes = 15
+script = ExtResource("5_amm84")
+framerate = 10.0
+totalframes = 15
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"

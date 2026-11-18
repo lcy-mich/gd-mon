@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://badr2jx21ii5w"
+
+[deps]
+
+files=["res://scripts/Utilities/Types/types_chart.Normal.translation", "res://scripts/Utilities/Types/types_chart.Fire.translation", "res://scripts/Utilities/Types/types_chart.Water.translation", "res://scripts/Utilities/Types/types_chart.Electric.translation", "res://scripts/Utilities/Types/types_chart.Grass.translation", "res://scripts/Utilities/Types/types_chart.Ice.translation", "res://scripts/Utilities/Types/types_chart.Fighting.translation", "res://scripts/Utilities/Types/types_chart.Poison.translation", "res://scripts/Utilities/Types/types_chart.Ground.translation", "res://scripts/Utilities/Types/types_chart.Flying.translation", "res://scripts/Utilities/Types/types_chart.Psychic.translation", "res://scripts/Utilities/Types/types_chart.Bug.translation", "res://scripts/Utilities/Types/types_chart.Rock.translation", "res://scripts/Utilities/Types/types_chart.Ghost.translation", "res://scripts/Utilities/Types/types_chart.Dragon.translation", "res://scripts/Utilities/Types/types_chart.Dark.translation", "res://scripts/Utilities/Types/types_chart.Steel.translation", "res://scripts/Utilities/Types/types_chart.Fairy.translation"]
+
+source_file="res://scripts/Utilities/Types/types_chart.csv"
+dest_files=["res://scripts/Utilities/Types/types_chart.Normal.translation", "res://scripts/Utilities/Types/types_chart.Fire.translation", "res://scripts/Utilities/Types/types_chart.Water.translation", "res://scripts/Utilities/Types/types_chart.Electric.translation", "res://scripts/Utilities/Types/types_chart.Grass.translation", "res://scripts/Utilities/Types/types_chart.Ice.translation", "res://scripts/Utilities/Types/types_chart.Fighting.translation", "res://scripts/Utilities/Types/types_chart.Poison.translation", "res://scripts/Utilities/Types/types_chart.Ground.translation", "res://scripts/Utilities/Types/types_chart.Flying.translation", "res://scripts/Utilities/Types/types_chart.Psychic.translation", "res://scripts/Utilities/Types/types_chart.Bug.translation", "res://scripts/Utilities/Types/types_chart.Rock.translation", "res://scripts/Utilities/Types/types_chart.Ghost.translation", "res://scripts/Utilities/Types/types_chart.Dragon.translation", "res://scripts/Utilities/Types/types_chart.Dark.translation", "res://scripts/Utilities/Types/types_chart.Steel.translation", "res://scripts/Utilities/Types/types_chart.Fairy.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

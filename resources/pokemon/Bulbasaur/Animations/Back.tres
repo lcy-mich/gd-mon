@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AnimationResource" format=3 uid="uid://b4svcwqi8sgxs"]
+
+[ext_resource type="Script" uid="uid://b2d8yb4kf8288" path="res://scripts/AnimatingSprite2D.gd" id="1_um2x1"]
+[ext_resource type="Texture2D" uid="uid://86on48mc7exs" path="res://graphics/pokemons/Bulbasaur/back_sheet.png" id="2_d1y8c"]
+
+[resource]
+script = ExtResource("1_um2x1")
+framerate = 800.0
+totalframes = 99
+hframes = 5
+vframes = 20
+texture = ExtResource("2_d1y8c")
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"

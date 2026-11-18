@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PokemonResource" format=3 uid="uid://s06parg2cc24"]
+
+[ext_resource type="Resource" uid="uid://bupx6rcr72woc" path="res://resources/pokemon/DD/Resources/PokeData.tres" id="1_wkh5g"]
+[ext_resource type="Resource" uid="uid://7lkgpk6o0pwe" path="res://resources/pokemon/DD/Resources/Stats.tres" id="2_bjd8j"]
+[ext_resource type="Script" uid="uid://cosl7mc1jwyxp" path="res://scripts/Resources/PokemonResource.gd" id="3_jevg6"]
+[ext_resource type="Resource" uid="uid://vyrnfs72av7l" path="res://resources/pokemon/DD/Resources/Types.tres" id="4_jevg6"]
+
+[resource]
+script = ExtResource("3_jevg6")
+base_pokedata = ExtResource("1_wkh5g")
+base_stats = ExtResource("2_bjd8j")
+types = ExtResource("4_jevg6")
+metadata/_custom_type_script = "uid://cosl7mc1jwyxp"

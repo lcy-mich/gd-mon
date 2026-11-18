@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://b5oaxfaqddqms"]
+
+[ext_resource type="Script" uid="uid://dldq13skirypi" path="res://scripts/Battle/BattleUI.gd" id="1_0lwnp"]
+[ext_resource type="Texture2D" uid="uid://cqvbj5vc84www" path="res://graphics/textures/GDMonUI.png" id="1_d17lq"]
+[ext_resource type="Theme" uid="uid://gjb65m8bqaxg" path="res://graphics/themes/UI_theme.tres" id="2_0lwnp"]
+
+[sub_resource type="Gradient" id="Gradient_d17lq"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.7294118, 0.6431373, 0.95686275, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d17lq"]
+gradient = SubResource("Gradient_d17lq")
+
+[sub_resource type="Gradient" id="Gradient_ktx7n"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.7294118, 0.6431373, 0.95686275, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2d744"]
+gradient = SubResource("Gradient_ktx7n")
+
+[node name="BattleUI" type="Control" unique_id=381265222 node_paths=PackedStringArray("fight_button", "bag_button", "run_button", "pokemon_button", "speech_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0lwnp")
+fight_button = NodePath("BG/Buttons/FightButton")
+bag_button = NodePath("BG/Buttons/BagButton")
+run_button = NodePath("BG/Buttons/RunButton")
+pokemon_button = NodePath("BG/Buttons/PokemonButton")
+speech_label = NodePath("BG/Speech")
+
+[node name="BG" type="NinePatchRect" parent="." unique_id=253469818]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -35.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_d17lq")
+patch_margin_left = 110
+patch_margin_top = 12
+patch_margin_right = 110
+patch_margin_bottom = 23
+
+[node name="Buttons" type="Control" parent="BG" unique_id=296262512]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -13.5
+offset_right = 145.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGLine" type="TextureRect" parent="BG/Buttons" unique_id=810343652]
+custom_minimum_size = Vector2(125, 1)
+custom_maximum_size = Vector2(125, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -0.5
+offset_right = 57.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_d17lq")
+
+[node name="BGLine2" type="TextureRect" parent="BG/Buttons" unique_id=1373793140]
+custom_minimum_size = Vector2(1, 23)
+custom_maximum_size = Vector2(1, 23)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_2d744")
+
+[node name="FightButton" type="Button" parent="BG/Buttons" unique_id=1137140069]
+custom_minimum_size = Vector2(0, 11)
+custom_maximum_size = Vector2(-1, 11)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -11.5
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0lwnp")
+text = "FIGHT"
+flat = true
+autowrap_trim_flags = 0
+
+[node name="BagButton" type="Button" parent="BG/Buttons" unique_id=289394715]
+custom_minimum_size = Vector2(0, 11)
+custom_maximum_size = Vector2(-1, 11)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -11.5
+offset_right = 63.0
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0lwnp")
+text = "BAG
+"
+flat = true
+autowrap_trim_flags = 0
+
+[node name="RunButton" type="Button" parent="BG/Buttons" unique_id=1467099626]
+custom_minimum_size = Vector2(0, 11)
+custom_maximum_size = Vector2(-1, 11)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 63.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0lwnp")
+text = "RUN
+"
+flat = true
+autowrap_trim_flags = 0
+
+[node name="PokemonButton" type="Button" parent="BG/Buttons" unique_id=488351289]
+custom_minimum_size = Vector2(0, 11)
+custom_maximum_size = Vector2(-1, 11)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = 1.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0lwnp")
+text = "GD-MON"
+flat = true
+autowrap_trim_flags = 0
+
+[node name="BGLine" type="TextureRect" parent="BG" unique_id=1441695532]
+custom_minimum_size = Vector2(1, 23)
+custom_maximum_size = Vector2(1, 23)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -12.5
+offset_right = 0.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_2d744")
+
+[node name="Speech" type="Label" parent="BG" unique_id=157905327]
+custom_minimum_size = Vector2(145, 21)
+custom_maximum_size = Vector2(145, 21)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -12.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0lwnp")
+theme_override_font_sizes/font_size = 5
+text = "What are you gonna do?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

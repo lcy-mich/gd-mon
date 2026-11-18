@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Types" format=3 uid="uid://vyrnfs72av7l"]
+
+[ext_resource type="Script" uid="uid://cjm0eunk3bpx7" path="res://scripts/Resources/Types.gd" id="1_iptrp"]
+
+[resource]
+script = ExtResource("1_iptrp")
+data = Array[int]([17, 11])
+metadata/_custom_type_script = "uid://cjm0eunk3bpx7"

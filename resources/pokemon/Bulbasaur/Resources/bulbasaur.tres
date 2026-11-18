@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BasePokemon" format=3 uid="uid://cu5k7olvc1nnu"]
+
+[ext_resource type="Script" uid="uid://dcc0xf5wnhue0" path="res://scripts/Resources/Moves.gd" id="1_hiwly"]
+[ext_resource type="Resource" uid="uid://dnptc1fo0cyl4" path="res://resources/pokemon/Bulbasaur/Resources/base_pokedata.tres" id="2_ypgwq"]
+[ext_resource type="Resource" uid="uid://dlsblxejm5dv5" path="res://resources/pokemon/Bulbasaur/Resources/base_stats.tres" id="3_x0afy"]
+[ext_resource type="Script" uid="uid://cosl7mc1jwyxp" path="res://scripts/Resources/PokemonResource.gd" id="4_h2mar"]
+
+[resource]
+script = ExtResource("4_h2mar")
+base_pokedata = ExtResource("2_ypgwq")
+base_stats = ExtResource("3_x0afy")
+type = Array[int]([4, 7])
+metadata/_custom_type_script = "uid://cosl7mc1jwyxp"

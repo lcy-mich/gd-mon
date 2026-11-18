@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AnimationResource" format=3 uid="uid://btfglujreqh1i"]
+
+[ext_resource type="Script" uid="uid://b2d8yb4kf8288" path="res://scripts/AnimatingSprite2D.gd" id="1_u4q6e"]
+[ext_resource type="Texture2D" uid="uid://8t2o7ogk1jhh" path="res://graphics/textures/dd-sheet.png" id="2_u4q6e"]
+
+[resource]
+script = ExtResource("1_u4q6e")
+framerate = 40.0
+totalframes = 11
+hframes = 11
+texture = ExtResource("2_u4q6e")
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"

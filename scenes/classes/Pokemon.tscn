@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cw7q26ayogj4k"]
+
+[ext_resource type="Script" uid="uid://c36fp2das8peg" path="res://scripts/Pokemon.gd" id="1_2o2o6"]
+[ext_resource type="Script" uid="uid://b2d8yb4kf8288" path="res://scripts/AnimatingSprite2D.gd" id="2_0k34w"]
+
+[node name="Pokemon" type="Node2D" unique_id=979893675]
+script = ExtResource("1_2o2o6")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1925960340]
+visible = false
+script = ExtResource("2_0k34w")
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="Front" type="Sprite2D" parent="." unique_id=1610605443]
+visible = false
+script = ExtResource("2_0k34w")
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="Back" type="Sprite2D" parent="." unique_id=7081554]
+visible = false
+script = ExtResource("2_0k34w")
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
