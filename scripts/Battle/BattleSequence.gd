@@ -8,6 +8,9 @@ extends Node2D
 @export var opponent_battle : Battle
 @export var player_battle : Battle
 
+@export var opponent_status : StatusBar
+@export var player_status : StatusBar
+
 @export var battle_ui : BattleUI
 #endregion
 
@@ -32,11 +35,15 @@ func _ready() -> void:
 	#endregion
 	
 	#region BattleUI setup
+	@warning_ignore("return_value_discarded")
 	battle_ui.run_pressed.connect(func() -> void:
 		Global.win()
 		go_main()
 		)
 	#endregion
+	
+	opponent_status.link(opponents)
+	player_status.link(allies)
 	
 	in_battle = true
 	
@@ -61,8 +68,8 @@ func _process(_delta : float) -> void:
 		
 #region Methods
 func is_living(pokemon : Pokemon) -> bool:
-	if !pokemon.health: return true #awaiting for existence
-	return pokemon.health.living
+	if !pokemon.health_component: return true #awaiting for existence
+	return pokemon.health_component.living
 
 func go_main() -> void:
 	@warning_ignore("return_value_discarded")

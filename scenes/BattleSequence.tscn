@@ -126,14 +126,16 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_imaek"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -164, -30, -40.162453, 0.59353375, 40.162453, -0.59353375, -105, -44, 0, 0, 0, 0, -18, -28)
+"points": PackedVector2Array(0, 0, 0, 0, -164, -30, -40.162453, 0.59353375, 40.162453, -0.59353375, -105, -44, 0, 0, 0, 0, 0, -29)
 }
 point_count = 3
 
-[node name="BattleSequence" type="Node2D" unique_id=701413113 node_paths=PackedStringArray("opponent_battle", "player_battle", "battle_ui")]
+[node name="BattleSequence" type="Node2D" unique_id=701413113 node_paths=PackedStringArray("opponent_battle", "player_battle", "opponent_status", "player_status", "battle_ui")]
 script = ExtResource("1_252w8")
 opponent_battle = NodePath("OpponentPath/PathFollow2D/OpponentBattle")
 player_battle = NodePath("PlayerPath/PathFollow2D/PlayerBattle")
+opponent_status = NodePath("OpponentStatusPath/PathFollow2D/StatusBar")
+player_status = NodePath("PlayerStatusPath/PathFollow2D/StatusBar")
 battle_ui = NodePath("BattleUI")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=859441]
@@ -144,7 +146,7 @@ libraries/ = SubResource("AnimationLibrary_lrwu0")
 autoplay = &"scene_enter"
 
 [node name="PlayerStatusPath" type="Path2D" parent="." unique_id=2143121119]
-position = Vector2(57, 21.999998)
+position = Vector2(56, 21.999998)
 scale = Vector2(1, 0.9090909)
 curve = SubResource("Curve2D_k5ewp")
 
@@ -202,7 +204,7 @@ scale = Vector2(1, 1.1000003)
 is_opponent = true
 
 [node name="OpponentStatusPath" type="Path2D" parent="." unique_id=21483795]
-position = Vector2(-61, -8)
+position = Vector2(-61, -18)
 curve = SubResource("Curve2D_imaek")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="OpponentStatusPath" unique_id=1288383704]

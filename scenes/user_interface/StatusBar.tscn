@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ib7lhrgedupt" path="res://graphics/textures/DD_tb_eyebrows_animate_disappear.png" id="7_2503r"]
 
 [sub_resource type="Animation" id="Animation_sadf7"]
-length = 0.001
+length = 12.333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -139,6 +139,54 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(46.09, 37.012)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Name:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Level:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Name:visible_ratio")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Level:visible_ratio")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_jg7tg"]
 resource_name = "opponent_enter"
@@ -150,7 +198,7 @@ tracks/0/path = NodePath("BlinkingEyes:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5999999, 2.6),
+"times": PackedFloat32Array(0, 1.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -162,7 +210,7 @@ tracks/1/path = NodePath("Eyebrows:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5999999, 2.6),
+"times": PackedFloat32Array(0, 1.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -174,7 +222,7 @@ tracks/2/path = NodePath("EyesDisappear:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5999999, 2.6, 3.3603318),
+"times": PackedFloat32Array(0, 1.8, 2.5603318),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -186,7 +234,7 @@ tracks/3/path = NodePath("EyebrowsDisappear:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.5999999, 2.6, 3.3603318),
+"times": PackedFloat32Array(0, 1.8, 2.5603318),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -200,7 +248,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(90, 0, 0, 0.33333334, 0, 90, -0.25, 0, 0.25468242, 31, 65, -0.11198425, 6, 0.077894315, -4.1734962, 150, -0.49095988, 8, 0, 0),
-"times": PackedFloat32Array(0.5999999, 2.533333, 2.8, 3.36)
+"times": PackedFloat32Array(1.1999998, 1.7333331, 2, 2.56)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -211,7 +259,7 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(48, 0, 0, 0.33333334, 0, 48, -0.25, 0, 0.25, 0, 56, -0.064293385, -3, 0.20241335, 9.44483, 50, 0, 0, 0, 0),
-"times": PackedFloat32Array(0.5999999, 2.533333, 2.8, 3.36)
+"times": PackedFloat32Array(1.1999998, 1.7333331, 2, 2.56)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -222,7 +270,7 @@ tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-46, 0, 0, 0.33333334, 0, -46, -0.25, 0, 0.07115996, -6, -52, -0.016577777, 1.7530314, 0.037826538, -4, -34, -0.06251346, 0, 0.07115984, 0, -76, -0.45762658, -5, 0, 0),
-"times": PackedFloat32Array(0.5999999, 2.533333, 2.6666665, 2.8, 3.36)
+"times": PackedFloat32Array(1.1999998, 1.7333331, 1.8666666, 2, 2.56)
 }
 tracks/7/type = "bezier"
 tracks/7/imported = false
@@ -233,7 +281,7 @@ tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(-31, 0, 0, 0.33333334, 0, -31, -0.25, 0, 0.10449326, 0, -36, -0.015000026, -0.107784584, 0.07777777, 0.5588821, -32, 0, 0, 0, 0),
-"times": PackedFloat32Array(0.5999999, 2.533333, 2.8, 3.36)
+"times": PackedFloat32Array(1.1999998, 1.7333331, 2, 2.56)
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -242,7 +290,7 @@ tracks/8/path = NodePath("Body/ProgressBarBG:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0.5999999, 3.3),
+"times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -254,7 +302,7 @@ tracks/9/path = NodePath("Body/ProgressBarBG:custom_maximum_size")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(3.3, 3.3666666),
+"times": PackedFloat32Array(2.5, 2.5666666),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
 "values": [Vector2(91, 0), Vector2(91, 6)]
@@ -266,15 +314,63 @@ tracks/10/path = NodePath("Body/ProgressBarBG:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(3.3, 3.3666666),
+"times": PackedFloat32Array(2.5, 2.5666666),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
 "values": [Vector2(46.09, 43), Vector2(46.09, 37.012)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Name:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Level:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Name:visible_ratio")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(2.2666667, 2.6266668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Level:visible_ratio")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(2.2666667, 2.6266668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
 
 [sub_resource type="Animation" id="Animation_55lrl"]
 resource_name = "player_enter"
-length = 3.4333334
+length = 3.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -282,7 +378,7 @@ tracks/0/path = NodePath("BlinkingEyes:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 2.5),
+"times": PackedFloat32Array(0, 1.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -306,7 +402,7 @@ tracks/2/path = NodePath("EyesDisappear:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 2.5, 3.2603319),
+"times": PackedFloat32Array(0, 1.8, 2.5603318),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -320,7 +416,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(90, 0, 0, 0.33333334, 0, 90, -0.25, 0, 0.25468242, 31, 65, -0.11198425, 6, 0.077894315, -4.1734962, 153, -0.091, 19.745, 0, 0),
-"times": PackedFloat32Array(0.5, 2.4333332, 2.7, 3.2666667)
+"times": PackedFloat32Array(1.0999999, 1.7333331, 2, 2.5666666)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
@@ -331,7 +427,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(48, 0, 0, 0.33333334, 0, 48, -0.25, 0, 0.25, 0, 56, -0.064293385, -3, 0.20241335, 9.44483, 51, -0.046, -0.167, 0, 0),
-"times": PackedFloat32Array(0.5, 2.4333332, 2.7, 3.2666667)
+"times": PackedFloat32Array(1.0999999, 1.7333331, 2, 2.5666666)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -342,7 +438,7 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-46, 0, 0, 0.33333334, 0, -46, -0.25, 0, 0.07115996, -6, -52, -0.016577777, 1.7530314, 0.037826538, -4, -34, -0.06251346, 0, 0.07115984, 0, -77, -0.056, 0.167, 0, 0),
-"times": PackedFloat32Array(0.5, 2.4333332, 2.5666666, 2.7, 3.2666667)
+"times": PackedFloat32Array(1.0999999, 1.7333331, 1.8666666, 2, 2.5666666)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -353,7 +449,7 @@ tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(-31, 0, 0, 0.33333334, 0, -31, -0.25, 0, 0.10449326, 0, -36, -0.015000026, -0.107784584, 0.07777777, 0.5588821, -33, -0.046, 0.167, 0, 0),
-"times": PackedFloat32Array(0.5, 2.4333332, 2.7, 3.2666667)
+"times": PackedFloat32Array(1.0999999, 1.7333331, 2, 2.5666666)
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -362,7 +458,7 @@ tracks/7/path = NodePath("Body/ProgressBarBG:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.5, 3.2),
+"times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -374,7 +470,7 @@ tracks/8/path = NodePath("Body/ProgressBarBG:custom_maximum_size")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(3.2, 3.2666667),
+"times": PackedFloat32Array(2.5, 2.5666666),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
 "values": [Vector2(91, 0), Vector2(91, 6)]
@@ -386,10 +482,58 @@ tracks/9/path = NodePath("Body/ProgressBarBG:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(3.2, 3.2666667),
+"times": PackedFloat32Array(2.5, 2.5666666),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
 "values": [Vector2(46.09, 43), Vector2(46.09, 37.012)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/Level:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.3333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Name:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.3333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Name:visible_ratio")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.3333333, 2.6933334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Level:visible_ratio")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(2.3333333, 2.6933334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2503r"]
@@ -399,7 +543,7 @@ _data = {
 &"player_enter": SubResource("Animation_55lrl")
 }
 
-[node name="StatusBar" type="Control" unique_id=594978155 node_paths=PackedStringArray("Animator", "health_bar")]
+[node name="StatusBar" type="Control" unique_id=594978155 node_paths=PackedStringArray("Animator", "health_bar", "name_label", "level_label", "health_label")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 86.0
@@ -410,6 +554,9 @@ size_flags_horizontal = 4
 script = ExtResource("1_fl6e0")
 Animator = NodePath("AnimationPlayer")
 health_bar = NodePath("Body/ProgressBarBG/ProgressBar")
+name_label = NodePath("Body/Name")
+level_label = NodePath("Body/Level")
+health_label = NodePath("Body/Level")
 
 [node name="Body" type="NinePatchRect" parent="." unique_id=1141099761]
 layout_mode = 1
@@ -432,7 +579,6 @@ patch_margin_bottom = 16
 
 [node name="ProgressBarBG" type="ColorRect" parent="Body" unique_id=999875258]
 visible = false
-clip_children = 2
 custom_minimum_size = Vector2(91, 7)
 custom_maximum_size = Vector2(91, 6)
 layout_mode = 1
@@ -448,7 +594,6 @@ grow_vertical = 2
 color = Color(0.7294118, 0.6431373, 0.95686275, 1)
 
 [node name="ProgressBar" type="ProgressBar" parent="Body/ProgressBarBG" unique_id=215625859]
-custom_minimum_size = Vector2(77, 4)
 custom_maximum_size = Vector2(77, 4)
 layout_mode = 1
 anchors_preset = 15
@@ -484,10 +629,75 @@ text = "HP
 "
 vertical_alignment = 1
 
+[node name="Health" type="Label" parent="Body/ProgressBarBG" unique_id=809684962]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.09
+offset_top = -0.012001038
+offset_right = -91.09
+offset_bottom = -0.012001038
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_sadf7")
+theme_override_font_sizes/font_size = 4
+text = "000/000"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 5
+
+[node name="Name" type="Label" parent="Body" unique_id=1560668007]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.080000006
+anchor_top = 0.42000002
+anchor_right = 0.92800003
+anchor_bottom = 0.84000003
+offset_left = 4.999999
+offset_top = 2.0
+offset_right = -44.98401
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_sadf7")
+text = "D.D."
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 5
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Level" type="Label" parent="Body" unique_id=2059373254]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.39400002
+anchor_right = 0.92700005
+anchor_bottom = 0.864
+offset_left = 88.65
+offset_top = 1.2999992
+offset_right = -5.050003
+offset_bottom = -17.2
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_sadf7")
+theme_override_font_sizes/font_size = 5
+text = "LVL 000"
+horizontal_alignment = 2
+vertical_alignment = 1
+text_overrun_behavior = 5
+visible_characters = 0
+visible_ratio = 0.0
+
 [node name="BlinkingEyes" type="Sprite2D" parent="." unique_id=852493199]
 position = Vector2(0, -8)
 texture = ExtResource("3_migfq")
 hframes = 21
+frame = 15
 script = ExtResource("4_mqxim")
 framerate = 15.0
 totalframes = 21

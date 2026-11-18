@@ -23,21 +23,24 @@ enum TEXTURE_STATE {
 #endregion
 
 #region Variables
-var health : Health
+var health_component : Health
 var stats : Stats
-var pokedata : PokeData
+var data : PokeData
 #endregion
 
 func _ready() -> void:
-	health = Health.new(pokemon_resource.base_stats.hp)
-	stats = pokemon_resource.base_stats.duplicate_deep()
-	pokedata = pokemon_resource.base_pokedata.duplicate_deep()
+	health_component = Health.new(pokemon_resource.stats.hp)
+	stats = pokemon_resource.stats.duplicate_deep()
+	data = pokemon_resource.pokedata.duplicate_deep()
 	
 	@warning_ignore("return_value_discarded")
-	health.connect("died", pokemon_died)
+	health_component.connect("died", pokemon_died)
 	texture_state_change()
 
 #region Methods
+func is_fully_loaded() -> bool:
+	return is_node_ready() and health_component and stats and data
+
 func pokemon_died(_attacker : Variant) -> void:
 	print("pokemon died :<")
 	hide()
@@ -49,6 +52,7 @@ func texture_state_change() -> void:
 		front.visible = texture_state == TEXTURE_STATE.Front
 	if back:
 		back.visible = texture_state == TEXTURE_STATE.Back
+	
 #endregion
 
 	

@@ -6,13 +6,23 @@ enum UNIT {
 	Metric,
 	Imperial
 }
+enum SEX {
+	Male,
+	Female
+}
 const METRE_TO_FEET_FACTOR : float = 3.28084
 const FEET_TO_INCHES_FACTOR : float = 12.0
 const KILO_TO_LBS_FACTOR : float = 2.204623
 #endregion
 
 #region Exports
+@export var name : String:
+	get():
+		if !name:
+			return species
+		return name
 @export var species : String
+@export var sex : SEX
 #height and weight is stored as metres and kilograms respectively
 @export var height : float
 @export var weight : float

@@ -1,0 +1,276 @@
+[gd_scene format=3 uid="uid://fxvi8t1rirbm"]
+
+[ext_resource type="Script" uid="uid://cfet6ohavp2dk" path="res://scripts/Battle/BattleSequence.gd" id="1_252w8"]
+[ext_resource type="PackedScene" uid="uid://dmugj744tmvf3" path="res://scenes/classes/Battle.tscn" id="2_1kmkd"]
+[ext_resource type="Texture2D" uid="uid://dlnrrcam0b3y8" path="res://graphics/textures/dd_textbox.png" id="3_kjw2r"]
+[ext_resource type="Texture2D" uid="uid://baluftdn0yvjg" path="res://graphics/textures/DD_textbox_blinking_eyes.png" id="4_iautc"]
+[ext_resource type="Script" uid="uid://b2d8yb4kf8288" path="res://scripts/AnimatingSprite2D.gd" id="5_t6177"]
+[ext_resource type="Texture2D" uid="uid://dl44i0xoqhbcu" path="res://graphics/textures/DD_textbox_blinking_eyes_angry_eyebrows.png" id="6_iautc"]
+[ext_resource type="PackedScene" uid="uid://ov75b66ep1xq" path="res://scenes/user_interface/StatusBar.tscn" id="6_lrwu0"]
+[ext_resource type="PackedScene" uid="uid://b5oaxfaqddqms" path="res://scenes/user_interface/BattleUI.tscn" id="7_t6177"]
+
+[sub_resource type="Animation" id="Animation_iautc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerStatusPath/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpponentStatusPath/PathFollow2D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BattleUI:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 90)]
+}
+
+[sub_resource type="Animation" id="Animation_t6177"]
+resource_name = "scene_enter"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerStatusPath/PathFollow2D:progress_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.8333334, 1.8333334),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpponentStatusPath/PathFollow2D:progress_ratio")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8333334, 1.8333334),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerPath/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.75, 1.75),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OpponentPath/PathFollow2D:progress_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.75, 1.75),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BattleUI:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.73333335),
+"transitions": PackedFloat32Array(-2, 0.5),
+"update": 0,
+"values": [Vector2(0, 130), Vector2(0, 90)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrwu0"]
+_data = {
+&"RESET": SubResource("Animation_iautc"),
+&"scene_enter": SubResource("Animation_t6177")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_k5ewp"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 166, -7.6293945e-06, 28.706425, 0, -28.706425, 0, 102, -13.200001, 0, 0, 0, 0, 13, -2.1999989)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_imaek"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -164, -30, -40.162453, 0.59353375, 40.162453, -0.59353375, -105, -44, 0, 0, 0, 0, -18, -28)
+}
+point_count = 3
+
+[node name="BattleSequence" type="Node2D" unique_id=701413113 node_paths=PackedStringArray("opponent_battle", "player_battle", "opponent_status", "player_status", "battle_ui")]
+script = ExtResource("1_252w8")
+opponent_battle = NodePath("OpponentPath/PathFollow2D/OpponentBattle")
+player_battle = NodePath("PlayerPath/PathFollow2D/PlayerBattle")
+opponent_status = NodePath("OpponentStatusPath/PathFollow2D/StatusBar")
+player_status = NodePath("PlayerStatusPath/PathFollow2D/StatusBar")
+battle_ui = NodePath("BattleUI")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=859441]
+limit_enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=150907766]
+libraries/ = SubResource("AnimationLibrary_lrwu0")
+autoplay = &"scene_enter"
+
+[node name="PlayerStatusPath" type="Path2D" parent="." unique_id=2143121119]
+position = Vector2(57, 21.999998)
+scale = Vector2(1, 0.9090909)
+curve = SubResource("Curve2D_k5ewp")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PlayerStatusPath" unique_id=301442298]
+position = Vector2(166, -7.6293945e-06)
+rotation = -1.538847
+rotates = false
+loop = false
+
+[node name="PlayerStatusUI" type="Sprite2D" parent="PlayerStatusPath/PathFollow2D" unique_id=1061898997]
+visible = false
+position = Vector2(8.795525, -0.2810974)
+rotation = 1.538847
+scale = Vector2(1, 1.1000003)
+texture = ExtResource("3_kjw2r")
+
+[node name="DdTextboxBlinkingEyes" type="Sprite2D" parent="PlayerStatusPath/PathFollow2D/PlayerStatusUI" unique_id=1890922478]
+position = Vector2(1, 0)
+texture = ExtResource("4_iautc")
+hframes = 21
+script = ExtResource("5_t6177")
+framerate = 10.0
+totalframes = 21
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="StatusBar" parent="PlayerStatusPath/PathFollow2D" unique_id=594978155 instance=ExtResource("6_lrwu0")]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5393804
+is_opponent = false
+
+[node name="OpponentPath" type="Path2D" parent="." unique_id=503426706]
+position = Vector2(58, -44.999992)
+scale = Vector2(1, 0.9090909)
+curve = SubResource("Curve2D_k5ewp")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="OpponentPath" unique_id=81159184]
+position = Vector2(166, -7.6293945e-06)
+rotation = -1.538847
+rotates = false
+loop = false
+
+[node name="OpponentBattle" parent="OpponentPath/PathFollow2D" unique_id=1242399695 instance=ExtResource("2_1kmkd")]
+position = Vector2(-1.0994263, 0.035129547)
+rotation = 1.538847
+scale = Vector2(1, 1.1000003)
+is_opponent = true
+
+[node name="OpponentStatusPath" type="Path2D" parent="." unique_id=21483795]
+position = Vector2(-61, -8)
+curve = SubResource("Curve2D_imaek")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="OpponentStatusPath" unique_id=1288383704]
+position = Vector2(-164, -30)
+rotation = -0.8098793
+rotates = false
+loop = false
+
+[node name="StatusBar" parent="OpponentStatusPath/PathFollow2D" unique_id=2090444508 instance=ExtResource("6_lrwu0")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.80983275
+is_opponent = true
+
+[node name="OpponentStatusUI" type="Sprite2D" parent="OpponentStatusPath/PathFollow2D" unique_id=277560455]
+visible = false
+position = Vector2(5.069435, -4.8270874)
+rotation = 0.8098793
+texture = ExtResource("3_kjw2r")
+
+[node name="DdTextboxBlinkingEyes" type="Sprite2D" parent="OpponentStatusPath/PathFollow2D/OpponentStatusUI" unique_id=998191585]
+position = Vector2(1, 0)
+texture = ExtResource("4_iautc")
+hframes = 21
+script = ExtResource("5_t6177")
+framerate = 10.0
+totalframes = 21
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="DdTextboxBlinkingEyesAngryEyebrows" type="Sprite2D" parent="OpponentStatusPath/PathFollow2D/OpponentStatusUI" unique_id=970491254]
+position = Vector2(1, -1)
+texture = ExtResource("6_iautc")
+hframes = 21
+script = ExtResource("5_t6177")
+framerate = 10.0
+totalframes = 21
+metadata/_custom_type_script = "uid://b2d8yb4kf8288"
+
+[node name="PlayerPath" type="Path2D" parent="." unique_id=1265241432]
+position = Vector2(-66, 50)
+curve = SubResource("Curve2D_imaek")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PlayerPath" unique_id=247064040]
+position = Vector2(-164, -30)
+rotation = -0.8098793
+rotates = false
+loop = false
+
+[node name="PlayerBattle" parent="PlayerPath/PathFollow2D" unique_id=851332698 instance=ExtResource("2_1kmkd")]
+position = Vector2(1.9649086, 6.413971)
+rotation = 0.8098793
+
+[node name="BattleUI" parent="." unique_id=381265222 instance=ExtResource("7_t6177")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_top = 90.0
+offset_bottom = 90.0
+grow_horizontal = 0
+grow_vertical = 0

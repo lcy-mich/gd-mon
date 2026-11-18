@@ -18,11 +18,11 @@ func _ready() -> void:
 	@warning_ignore("return_value_discarded")
 	connect("visibility_changed", on_visibility_changed)
 	
-	on_visibility_changed()
+	on_visibility_changed(frame)
 
-func on_visibility_changed() -> void:
+func on_visibility_changed(set_frame : int = 0) -> void:
 	if is_visible_in_tree():
-		frame = 0
+		frame = set_frame
 		FrameTimer.start()
 		return
 	FrameTimer.stop()

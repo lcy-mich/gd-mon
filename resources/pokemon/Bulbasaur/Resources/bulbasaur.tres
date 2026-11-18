@@ -1,13 +1,36 @@
-[gd_resource type="Resource" script_class="BasePokemon" format=3 uid="uid://cu5k7olvc1nnu"]
+[gd_resource type="Resource" script_class="PokemonResource" format=3 uid="uid://cu5k7olvc1nnu"]
 
-[ext_resource type="Script" uid="uid://dcc0xf5wnhue0" path="res://scripts/Resources/Moves.gd" id="1_hiwly"]
-[ext_resource type="Resource" uid="uid://dnptc1fo0cyl4" path="res://resources/pokemon/Bulbasaur/Resources/base_pokedata.tres" id="2_ypgwq"]
-[ext_resource type="Resource" uid="uid://dlsblxejm5dv5" path="res://resources/pokemon/Bulbasaur/Resources/base_stats.tres" id="3_x0afy"]
+[ext_resource type="Script" uid="uid://dbgcbxagvtkth" path="res://scripts/Resources/PokeData.gd" id="1_gfdba"]
+[ext_resource type="Script" uid="uid://b4fystsfle7h6" path="res://scripts/Resources/Stats.gd" id="3_spcjs"]
+[ext_resource type="Script" uid="uid://cjm0eunk3bpx7" path="res://scripts/Resources/Types.gd" id="4_ggaul"]
 [ext_resource type="Script" uid="uid://cosl7mc1jwyxp" path="res://scripts/Resources/PokemonResource.gd" id="4_h2mar"]
+
+[sub_resource type="Resource" id="Resource_gjxlk"]
+script = ExtResource("1_gfdba")
+species = "Bulbasaur"
+height = 0.7
+weight = 6.9
+metadata/_custom_type_script = "uid://dbgcbxagvtkth"
+
+[sub_resource type="Resource" id="Resource_tc0ok"]
+script = ExtResource("3_spcjs")
+hp = 45
+attack = 49
+defense = 49
+special_attack = 65
+special_defense = 65
+speed = 45
+level = 1
+metadata/_custom_type_script = "uid://b4fystsfle7h6"
+
+[sub_resource type="Resource" id="Resource_7cul1"]
+script = ExtResource("4_ggaul")
+data = Array[int]([4, 7])
+metadata/_custom_type_script = "uid://cjm0eunk3bpx7"
 
 [resource]
 script = ExtResource("4_h2mar")
-base_pokedata = ExtResource("2_ypgwq")
-base_stats = ExtResource("3_x0afy")
-type = Array[int]([4, 7])
+pokedata = SubResource("Resource_gjxlk")
+stats = SubResource("Resource_tc0ok")
+types = SubResource("Resource_7cul1")
 metadata/_custom_type_script = "uid://cosl7mc1jwyxp"

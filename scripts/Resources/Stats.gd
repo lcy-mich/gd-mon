@@ -7,3 +7,5 @@ extends Resource
 @export var special_attack : int
 @export var special_defense : int
 @export var speed : int
+
+@export var level : int

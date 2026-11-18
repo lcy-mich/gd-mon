@@ -1,13 +1,32 @@
 [gd_resource type="Resource" script_class="PokemonResource" format=3 uid="uid://s06parg2cc24"]
 
-[ext_resource type="Resource" uid="uid://bupx6rcr72woc" path="res://resources/pokemon/DD/Resources/PokeData.tres" id="1_wkh5g"]
-[ext_resource type="Resource" uid="uid://7lkgpk6o0pwe" path="res://resources/pokemon/DD/Resources/Stats.tres" id="2_bjd8j"]
+[ext_resource type="Script" uid="uid://dbgcbxagvtkth" path="res://scripts/Resources/PokeData.gd" id="1_wkh5g"]
+[ext_resource type="Script" uid="uid://b4fystsfle7h6" path="res://scripts/Resources/Stats.gd" id="3_bjd8j"]
 [ext_resource type="Script" uid="uid://cosl7mc1jwyxp" path="res://scripts/Resources/PokemonResource.gd" id="3_jevg6"]
 [ext_resource type="Resource" uid="uid://vyrnfs72av7l" path="res://resources/pokemon/DD/Resources/Types.tres" id="4_jevg6"]
 
+[sub_resource type="Resource" id="Resource_55lrl"]
+script = ExtResource("1_wkh5g")
+name = "master dd"
+species = "D.D."
+height = 0.12
+weight = 0.67
+metadata/_custom_type_script = "uid://dbgcbxagvtkth"
+
+[sub_resource type="Resource" id="Resource_sadf7"]
+script = ExtResource("3_bjd8j")
+hp = 67
+attack = 1
+defense = 2
+special_attack = 3
+special_defense = 4
+speed = 5
+level = 6
+metadata/_custom_type_script = "uid://b4fystsfle7h6"
+
 [resource]
 script = ExtResource("3_jevg6")
-base_pokedata = ExtResource("1_wkh5g")
-base_stats = ExtResource("2_bjd8j")
+pokedata = SubResource("Resource_55lrl")
+stats = SubResource("Resource_sadf7")
 types = ExtResource("4_jevg6")
 metadata/_custom_type_script = "uid://cosl7mc1jwyxp"
